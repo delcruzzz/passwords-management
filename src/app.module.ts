@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { RolesModule } from './roles/roles.module';
+import { SitesModule } from './sites/sites.module';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
@@ -23,6 +24,7 @@ dotenv.config();
     AuthModule,
     UsersModule,
     RolesModule,
+    SitesModule,
   ],
 })
 export class AppModule {}

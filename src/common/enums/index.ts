@@ -1,5 +1,4 @@
 export enum pollsterOrLeader {
-  POLLSTER,
-  LEADER,
+  USER,
   SUPERADMIN,
 }

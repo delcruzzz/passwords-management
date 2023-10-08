@@ -1,5 +1,4 @@
 export enum Roles {
-  Pollster = 'POLLSTER',
-  Leader = 'LEADER',
+  User = 'USER',
   SuperAdmin = 'SUPERADMIN',
 }

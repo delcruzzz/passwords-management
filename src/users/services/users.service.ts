@@ -32,7 +32,14 @@ export class UsersService {
         user.roles = roles;
       }
 
-      return await this.userRepository.save(user);
+      await this.userRepository.save(user);
+      return {
+        id: user.id,
+        name: user.name,
+        identityCard: user.identityCard,
+        cellPhoneNumber: user.cellPhoneNumber,
+        roles: user.roles,
+      };
     } catch (error: any) {
       if (error.code === duplicateErrorKey)
         throw new HttpException(
