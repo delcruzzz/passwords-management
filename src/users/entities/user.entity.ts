@@ -1,9 +1,11 @@
+import { Password } from 'src/passwords/entities/password.entity';
 import { Role } from 'src/roles/entities/role.entity';
 import {
   Column,
   Entity,
   JoinTable,
   ManyToMany,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -49,4 +51,6 @@ export class User {
   @ManyToMany(() => Role, (role: Role) => role.users, { nullable: false })
   @JoinTable()
   roles: Role[];
+  @OneToMany(() => Password, (password) => password.user, { nullable: false })
+  passwords: Password[];
 }

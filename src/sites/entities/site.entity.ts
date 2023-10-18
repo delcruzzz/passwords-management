@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Password } from 'src/passwords/entities/password.entity';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ name: 'sites' })
 export class Site {
@@ -19,4 +20,7 @@ export class Site {
     nullable: true,
   })
   imageUrl: string;
+
+  @OneToMany(() => Password, (password) => password.site, { nullable: false })
+  passwords: Password[];
 }

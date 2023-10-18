@@ -5,6 +5,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { RolesModule } from './roles/roles.module';
 import { SitesModule } from './sites/sites.module';
+import { PasswordsModule } from './passwords/passwords.module';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
@@ -25,6 +26,7 @@ dotenv.config();
     UsersModule,
     RolesModule,
     SitesModule,
+    PasswordsModule,
   ],
 })
 export class AppModule {}
